@@ -1,0 +1,25 @@
+#controls{
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+#codeblock{
+	margin-top: 20px;
+}
+
+#array{
+	position: fixed;
+}
+
+.valbox{
+	font-size: 18px;
+	margin: 5px;
+}
+
+body {
+	font-family: monospace;
+}
+
+code {
+	font-size: 24px;
+}

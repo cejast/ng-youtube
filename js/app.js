@@ -1,0 +1,1 @@
+var app = angular.module('youtube-app', ['youtube-controller', 'youtube-service', 'youtube-directive']);
