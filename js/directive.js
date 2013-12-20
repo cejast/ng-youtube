@@ -3,9 +3,7 @@ var dir = angular.module('youtube-directive', ['youtube-service']);
 dir.directive('youtube', ['youtubeEmbed', '$window', function(youtubeEmbed, $window){
 	return {
 		restrict: 'E',
-		template: function(scope, element, attrs){
-			return '<div id="player"></div>'
-		},
+		template: '<div id="player"></div>',
 		link: function(scope, element, attrs){
 			youtubeEmbed.yt().then(function(yt){
 				$window.onYouTubePlayerAPIReady = function(){

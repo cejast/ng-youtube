@@ -30,9 +30,7 @@ youtube.factory('youtubeEmbed', ['$document', '$q', '$rootScope', function($docu
 youtube.directive('youtube', ['youtubeEmbed', '$window', function(youtubeEmbed, $window){
 	return {
 		restrict: 'E',
-		template: function(scope, element, attrs){
-			return '<div id="player"></div>'
-		},
+		template: '<div id="player"></div>',
 		link: function(scope, element, attrs){
 			youtubeEmbed.yt().then(function(yt){
 				$window.onYouTubePlayerAPIReady = function(){
