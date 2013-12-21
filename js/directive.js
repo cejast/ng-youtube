@@ -11,13 +11,7 @@ dir.directive('youtube', ['youtubeEmbed', '$window', function(youtubeEmbed, $win
 						height: attrs.height,
 						width: attrs.width,
 						videoId: attrs.id
-					});
-
-					scope.$watch(function(){ return attrs.id;}, function(newVal){
-						var videoId = newVal;
-						console.log(videoId);
-						scope.player = scope.createPlayer(attrs);
-					});
+					});					
 
 					scope.createPlayer = function(attrs){
 						if(scope.player) scope.player.destroy();
@@ -29,6 +23,12 @@ dir.directive('youtube', ['youtubeEmbed', '$window', function(youtubeEmbed, $win
 					}
 
 				}
+
+				scope.$watch(function(){ return attrs.id;}, function(newVal){
+						var videoId = newVal;
+						console.log(videoId);
+						scope.player = scope.createPlayer(attrs);
+				});
 
 			});
 		}
