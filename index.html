@@ -8,8 +8,18 @@
 
 <div ng-controller="youtube-controller" style="margin: 0 auto; text-align: center;">
 	<div id="array">
-		<ul ng-repeat="video in videos"><li style="list-style-type: none;">{{video}}</li></ul>
-		<input placeholder="add" ng-model="add"></input><button ng-click="addvideo()">add</button>
+		<ul ng-repeat="video in videos">
+			<li style="list-style-type: none;"><button ng-click="remove(video)">x</button><br><b>Id:</b> {{video.id}}<br><b>Show Controls:</b> {{video.showControls}}<br><b>Autoplay:</b> {{video.autoplay}} </li>
+		</ul>
+		<h3>Add new video:</h3>
+		<input placeholder="add" ng-model="add" /><br>
+		<label>
+			<input type="checkbox" ng-model="showControls" ng-true-value="1" ng-false-value="0" /> Show Controls
+		</label><br>
+		<label>
+			<input type="checkbox" ng-model="autoplay" ng-true-value="1" ng-false-value="0" /> Autoplay
+		</label><br>
+		<button ng-click="addvideo()">Add Video</button>
 	</div>
 
 	<div id="controls">
@@ -19,7 +29,9 @@
 		<button ng-click="go()">Next Video</button>
 	</div>
 	
-	<youtube id="{{current}}" width="{{width}}" height="{{height}}"></youtube>
+	<youtube id="{{current.id}}" width="{{width}}" height="{{height}}" current-time="time" controls="{{current.showControls}}"></youtube>
+	<br>
+	Time: {{time}}<br>
 
 	<div id="codeblock"><code>{{code()}}</code></div>
 
