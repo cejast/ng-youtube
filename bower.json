@@ -1,0 +1,22 @@
+{
+  "name": "ng-youtube",
+  "version": "0.0.1",
+  "homepage": "http://cejast.github.io/ng-youtube/",
+  "authors": [
+    "Cem Staveley <cemjs@hotmail.co.uk>"
+  ],
+  "description": "AngularJS YouTube embed directive",
+  "main": "src/youtube.js",
+  "keywords": [
+    "angular.js",
+    "youtube"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
